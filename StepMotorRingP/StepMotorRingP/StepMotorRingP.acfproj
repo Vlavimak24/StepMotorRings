@@ -1,0 +1,23 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{b1119c56-85e2-4d34-a21d-c9bea268d8f2}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>StepMotorRingP</RootNamespace>
+    <AssemblyName>StepMotorRingP</AssemblyName>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <CAMProjectFile>StepMotorRingP\PrjLibrary.mdb</CAMProjectFile>
+    <UniqueProjectId>{b1119c56-85e2-4d34-a21d-c9bea268d8f2}</UniqueProjectId>
+    <CAMProjectVersion>5.50.7</CAMProjectVersion>
+    <Name>StepMotorRingP</Name>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Simulation' ">
+    <OutputPath>bin\Simulation\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Online' ">
+    <OutputPath>bin\Online\</OutputPath>
+  </PropertyGroup>
+  <Import Project="$(DevEnvDir)\PackagesToLoad\Targets\ISaGRAF.ISaGRAF5.targets" />
+  <Import Project="$(DevEnvDir)\PackagesToLoad\Targets\Carel.targets" />
+</Project>
